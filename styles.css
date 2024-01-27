@@ -1,0 +1,348 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('photos/DeepPurpleBlueGradient.png') center center fixed; /* Replace 'path/to/your/background-image.jpg' with the actual path to your image */
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Change the scrollbar style */
+body::-webkit-scrollbar {
+    width: 8px; /* Set the width of the scrollbar */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #C7C7C7; /* Set the color of the scrollbar thumb */
+    border-radius: 4px; /* Optional: Add rounded corners to the thumb */
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #046377; /* Set the color of the scrollbar track */
+}
+
+
+/* Transparent Navbar Styles */
+.navbar-container{
+    margin-right: 10px;
+}
+.navbar {
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between; /* Add space between the logo and links */
+    align-items: center;
+}
+
+.navbar a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #c7c7c7;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: aqua;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 60px auto 20px; /* Added margin-top to accommodate the fixed navbar */
+    padding: 40px;
+    text-align: center; /* Center-align content in the container */
+}
+#founders .card {
+    width: 100%; /* Take full width */
+    height: 300px; /* Fixed height */
+    margin-right: 20px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.5s; /* Add smooth transition on hover */
+}
+
+#founders .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Make the image cover the entire space while maintaining aspect ratio */
+    display: block;
+    border-radius: 10px; /* Optional: Add border-radius for a rounded corner effect */
+    transition: transform 0.5s; /* Add smooth transition on hover */
+}
+
+#founders .card h3 {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin-bottom: 20px;
+    padding: 0 15px;
+    color: #fff;
+    font-size: 18px;
+    text-align: left;
+    z-index: 1; /* Ensure text is above the vignette effect */
+}
+#founders .card p {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0 15px;
+    color: #c7c7c7;
+    font-size: 16px;
+    text-align: left;
+    font-weight: bold;
+    z-index: 1; /* Ensure text is above the vignette effect */
+}
+
+#founders .card:hover {
+    transform: scale(1.1); /* Enlarge the card on hover */
+}
+
+#founders .card:hover img {
+    transform: scale(1.2); /* Enlarge the image on hover */
+    filter: brightness(70%) contrast(120%); /* Apply vignette effect */
+}
+
+/* Founders Section Styles */
+#founders .card-container {
+    display: flex;
+    justify-content: space-around; /* Add space between cards */
+    margin-bottom: 50px; /* Add space below the Founders section */
+    flex-direction: row; /* Set default direction to row */
+}
+
+
+/* Products Section Styles */
+#products .card {
+    width: 300px;
+    height: 200px;
+    background-image: url("photos/purple1.jpg");
+    margin: 20px 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.5s;
+}
+
+#products .card:hover {
+    transform: scale(1.1); /* Enlarge the card on hover */
+}
+
+#products .card h3 {
+    text-decoration: none;
+    color: #fff;
+    padding: 40px;
+    font-size: 20px;
+}
+
+#products .card a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#products .card-container {
+    display: flex;
+    justify-content: space-around; /* Add space between cards */
+    margin-bottom: 50px; /* Add space below the Products section */
+}
+
+/* Center-align the headings and paragraph content in sections */
+h4{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #C7C7C7;
+    font-size: 25px;
+}
+
+h4:hover{
+    color: aqua;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 20px; /* Add space below headings and paragraphs */
+    color:#C7C7C7;
+    font-size: 20px;
+}
+
+/* Adjustments for the About Section */
+#about {
+    margin-bottom: 50px;
+}
+
+/* Typing Animation Styles */
+.typing-animation {
+    font-size: 12em;
+    font-weight: bold;
+    color: #fff; /* Purple color */
+    text-align: center;
+    margin-top: 105px; /* Adjust the margin as needed */
+}
+
+/* Cursor Animation Styles */
+.typing-animation::after {
+    content: "|";
+    animation: blinkCursor 0.7s infinite;
+}
+
+@keyframes blinkCursor {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+/* styles.css */
+/* Scroll Animation Styles */
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(-50px); /* Changed translateX to translateY for vertical movement */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.scroll-animation.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+    background-image: url("photos/purple4.jpg");
+    max-width: 90%; /* Adjusted for better mobile responsiveness */
+    margin: 10% auto; /* Adjusted for better mobile responsiveness */
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.popup-content h2 {
+    color: #fff;
+}
+
+.popup-content p {
+    color: #c7c7c7;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1; /* Ensure that the close button is on top of other elements */
+}
+
+/* Additional CSS for Clickable Card */
+.clickable-card {
+    cursor: pointer;
+    text-align: center;
+    width: 100%; /* Changed width for better mobile responsiveness */
+    height: auto; /* Changed height for better mobile responsiveness */
+}
+
+.clickable-card p {
+    color: #fff;
+}
+
+.clickable-card:hover {
+    background-color: #8a8787;
+    color: #fff;
+}
+
+/* Footer Styles */
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    
+    bottom: 0;
+    
+}
+
+
+/* Responsive styles for screens with a maximum width of 768px (typical for mobile devices) */
+@media only screen and (max-width: 768px) {
+    .navbar{
+        flex-direction: column;
+        align-items:center;
+       
+        
+    }
+    .navbar a {
+        margin-right: 10px ;
+        text-decoration:underline;
+        
+    }
+    .logo{
+    margin-bottom: 10px;
+}
+    .container {
+        padding: 10px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .typing-animation {
+        font-size: 2em;
+        margin-top: 60px;
+        padding: 50px;
+        margin-bottom: -90px;
+    }
+   
+
+    #founders .card-container {
+        flex-direction: column; /* Display cards in a single column on smaller screens */
+        align-items: center; /* Center-align cards */
+    }
+
+    #founders .card {
+        width: 80%;
+        margin-right: 0; /* Remove margin for better spacing */
+        margin-bottom: 30px; /* Add margin between cards in mobile view */
+        height: 430px; /* Set a fixed height for consistency */
+        overflow: hidden; /* Prevent card overflow */
+    }
+  
+    #products .card-container {
+        flex-direction: column; /* Display cards in a single column on smaller screens */
+        align-items: center; /* Center-align cards */
+    }
+    .close {
+        font-size: 18px; /* Adjust the font size for smaller screens */
+        padding: 25px; /* Add more padding for better touch interaction */
+        cursor: pointer;
+     z-index: 1;
+    }
+    
+}
